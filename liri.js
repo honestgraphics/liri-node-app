@@ -98,14 +98,14 @@ function mySpotify(param) {
       console.log('Album: ' + data.tracks.items[0].album.name);
 
 
-      // // sends data to log.txt file
-      // var data = {
-      //   Artists: json.artists,  //.join(', ')
-      //   Song: json.param,
-      //   Spotify_Song_Preview_Link: json.data.tracks.items[0].preview_url,
-      //   Album: json.data.tracks.items[0].album.name,
-      // }
-      // logCommand(JSON.stringify(data));
+      // sends data to log.txt file
+      var data = {
+        Artists: artists.join(', '),
+        Song: param,
+        Spotify_Song_Preview_Link: data.tracks.items[0].preview_url,
+        Album: data.tracks.items[0].album.name,
+      }
+      logCommand(JSON.stringify(data));
 
 
 
